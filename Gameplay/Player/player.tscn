@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://1giq7r5dnvyg"]
 
 [ext_resource type="Script" uid="uid://pdajem1y3mbh" path="res://Gameplay/Player/character_body_2d.gd" id="1_t4lfm"]
-[ext_resource type="Texture2D" uid="uid://c3tdx8vdo6bi4" path="res://icon.svg" id="1_xoh2h"]
+[ext_resource type="Texture2D" uid="uid://bpgn2gl0tiq4y" path="res://Assets/Sprites/Sprite-0001.png" id="2_t4lfm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
 size = Vector2(128, 127)
@@ -15,5 +15,7 @@ script = ExtResource("1_t4lfm")
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_udbx3")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1401334013]
-texture = ExtResource("1_xoh2h")
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2038145086]
+position = Vector2(0, -0.9999962)
+scale = Vector2(4, 3.9375002)
+texture = ExtResource("2_t4lfm")
