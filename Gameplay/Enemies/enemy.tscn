@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://dhypjlm2ujle7"]
 
 [ext_resource type="Script" uid="uid://bfmjkndruh0ad" path="res://Gameplay/Enemies/character_body_2d.gd" id="1_0pe0a"]
-[ext_resource type="Texture2D" uid="uid://s6t0f4ejnd8w" path="res://Assets/Sprites/ShockedGuy.png" id="2_4763r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
-size = Vector2(221, 197)
+[ext_resource type="Texture2D" uid="uid://xeyagc3cgu2t" path="res://Assets/Sprites/Marimonda.png" id="2_0pe0a"]
 
 [node name="Enemy" type="Node2D" unique_id=721120592]
 
@@ -14,7 +11,7 @@ collision_mask = 5
 script = ExtResource("1_0pe0a")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1520421586]
-texture = ExtResource("2_4763r")
+texture = ExtResource("2_0pe0a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1679095030]
-shape = SubResource("RectangleShape2D_udbx3")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=157012257]
+polygon = PackedVector2Array(-33, -134, -24, -133, -14, -129, -5, -124, 13, -124, 21, -129, 39, -128, 53, -124, 78, -106, 104, -95, 132, -53, 135, -4, 121, 18, 96, 5, 84, 3, 86, 17, 93, 37, 70, 75, 45, 110, 18, 119, -59, 57, -55, 37, -27, 18, -31, 7, -54, 24, -75, 30, -104, 20, -117, 2, -121, -44, -113, -67, -84, -95, -62, -100, -44, -91, -36, -98, -42, -117, -44, -123)
