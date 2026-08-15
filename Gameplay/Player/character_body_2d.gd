@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var SPEED = 400
 @export var JUMP_VELOCITY = -400.0
+@export var rotation_speed = 2.0 # radians per second
+@export var speed = 100.0
 var screen_size
 
 
@@ -23,3 +25,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
+	var turn = 1
+	rotation += turn * rotation_speed * delta
+	position.x += speed * delta   

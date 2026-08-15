@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://pdajem1y3mbh" path="res://Gameplay/Player/character_body_2d.gd" id="1_t4lfm"]
 [ext_resource type="Texture2D" uid="uid://bxigdhq12wigo" path="res://Assets/Sprites/Arepa.png" id="2_t4lfm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
-size = Vector2(128, 127)
+[sub_resource type="CircleShape2D" id="CircleShape2D_nj2yk"]
+radius = 41.0
 
 [node name="Player" type="Node2D" unique_id=14611999]
 
@@ -17,5 +17,5 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_t4lfm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=867981450]
-position = Vector2(0, -1.5)
-shape = SubResource("RectangleShape2D_udbx3")
+position = Vector2(6, -3)
+shape = SubResource("CircleShape2D_nj2yk")
