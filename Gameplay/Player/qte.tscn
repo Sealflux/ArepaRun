@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bfr7sa0hvjd1"]
+
+[node name="QTE" type="Node2D" unique_id=176600565]
+
+[node name="Button" type="Button" parent="." unique_id=1142495703]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Q"
+
+[node name="Timer" type="Timer" parent="Button" unique_id=116095558]

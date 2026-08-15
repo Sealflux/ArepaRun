@@ -1,7 +1,7 @@
 extends Area2D
 
 var screen_size
-
+@export var speeddecrease: float = -50
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,3 +15,7 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body : Node) -> void:
 	print(body)
 	print("entered")
+	if body.is_in_group("player"):
+		if body.has_method("speedadjust"):
+			body.speedadjust(speeddecrease)
+			self.queue_free()

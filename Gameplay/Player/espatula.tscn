@@ -1,17 +1,58 @@
 [gd_scene format=3 uid="uid://cpdbjru378s6i"]
 
 [ext_resource type="Script" uid="uid://0mfej87oegqy" path="res://Gameplay/Player/Espatula.gd" id="1_n747g"]
+[ext_resource type="Script" uid="uid://bhcejtjhqadgm" path="res://Gameplay/Player/espatulaanim.gd" id="1_pfcae"]
 [ext_resource type="Texture2D" uid="uid://dvplws57noj4b" path="res://Assets/Sprites/Espatula.png" id="1_uvglg"]
 
+[sub_resource type="Animation" id="Animation_n747g"]
+resource_name = "Espatula"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2.6581364]
+}
+
+[sub_resource type="Animation" id="Animation_pfcae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uiq87"]
+_data = {
+&"Espatula": SubResource("Animation_n747g"),
+&"RESET": SubResource("Animation_pfcae")
+}
+
 [node name="Espatula" type="Node2D" unique_id=533407782]
+script = ExtResource("1_pfcae")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=225293223]
+libraries/ = SubResource("AnimationLibrary_uiq87")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2019871998]
 script = ExtResource("1_n747g")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=777026256]
-position = Vector2(0, -1)
-polygon = PackedVector2Array(-17, -11, -17, -28, -19, -31, -21, -33, -29, -36, -43, -37, -110, -41, -114, -36, -114, 36, -110, 41, -76, 40, -65, 37, -29, 36, -25, 35, -21, 33, -19, 29, -18, 27, -19, 10, -17, 10)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1747679038]
+polygon = PackedVector2Array(-77, -30, -80, -27, -80, 24, -77, 28, -53, 28, -45, 25, -21, 25, -12, 19, -12, -20, -19, -26, -41, -27)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1803987588]
 position = Vector2(0, -1)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_uvglg")

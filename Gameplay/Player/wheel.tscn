@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cqbh5u0uqsa03"]
+
+[node name="Wheel" type="Node2D" unique_id=1930774252]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1843773256]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Sprite2D" unique_id=1131670530]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Sprite2D" unique_id=704288091]

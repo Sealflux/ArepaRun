@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ry4qhyyw60i1"]
+
+[ext_resource type="Texture2D" uid="uid://s6t0f4ejnd8w" path="res://Assets/Sprites/ShockedGuy.png" id="1_brov6"]
+[ext_resource type="Script" uid="uid://dw35r7fuqc383" path="res://Gameplay/Player/bus.gd" id="1_l3w2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
+size = Vector2(221, 198)
+
+[node name="bus" type="Node2D" unique_id=1014882527]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2027182093]
+collision_layer = 8
+collision_mask = 10
+script = ExtResource("1_l3w2u")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1499762799]
+texture = ExtResource("1_brov6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1849522961]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_udbx3")
