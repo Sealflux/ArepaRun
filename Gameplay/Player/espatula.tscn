@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://cpdbjru378s6i"]
 
+[ext_resource type="Script" uid="uid://0mfej87oegqy" path="res://Gameplay/Player/Espatula.gd" id="1_n747g"]
 [ext_resource type="Texture2D" uid="uid://dvplws57noj4b" path="res://Assets/Sprites/Espatula.png" id="1_uvglg"]
 
 [node name="Espatula" type="Node2D" unique_id=533407782]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=90946945]
+[node name="Area2D" type="Area2D" parent="." unique_id=2019871998]
+script = ExtResource("1_n747g")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=777026256]
+position = Vector2(0, -1)
 polygon = PackedVector2Array(-17, -11, -17, -28, -19, -31, -21, -33, -29, -36, -43, -37, -110, -41, -114, -36, -114, 36, -110, 41, -76, 40, -65, 37, -29, 36, -25, 35, -21, 33, -19, 29, -18, 27, -19, 10, -17, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1803987588]
+position = Vector2(0, -1)
 texture = ExtResource("1_uvglg")

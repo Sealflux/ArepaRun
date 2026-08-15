@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://1giq7r5dnvyg" path="res://Gameplay/Player/player.tscn" id="1_gnif3"]
 [ext_resource type="Texture2D" uid="uid://22flj6sr85bs" path="res://Assets/Sprites/Sidewalk.png" id="1_lwy2l"]
+[ext_resource type="PackedScene" uid="uid://cpdbjru378s6i" path="res://Gameplay/Player/espatula.tscn" id="4_7pswh"]
 [ext_resource type="PackedScene" uid="uid://dhypjlm2ujle7" path="res://Gameplay/Enemies/enemy.tscn" id="4_nj2yk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
@@ -29,3 +30,6 @@ region_rect = Rect2(0, 0, 5000, 40)
 
 [node name="Enemy" parent="." unique_id=721120592 instance=ExtResource("4_nj2yk")]
 position = Vector2(-784, -41)
+
+[node name="Espatula" parent="." unique_id=533407782 instance=ExtResource("4_7pswh")]
+position = Vector2(478, 4)

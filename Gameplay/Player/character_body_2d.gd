@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var SPEED = 400
 @export var JUMP_VELOCITY = -400.0
 @export var rotation_speed = 6.0 # radians per second
-@export var speed = 300.0
+@export var speed = 100.0
 var screen_size
 
 
