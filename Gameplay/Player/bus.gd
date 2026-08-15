@@ -1,23 +1,21 @@
-extends CharacterBody2D
+extends Area2D
 
-const JUMP_VELOCITY = -400.0
+var screen_size
 
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await get_tree().create_timer(5).timeout
-	self.queue_free()
+	screen_size = get_viewport_rect().size
+	body_entered.connect(_on_body_entered)
+
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	pass
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	if is_on_floor():
-		position.x -= 5000 * delta
-		
-	
-	   
-	move_and_slide()
-	
+func _on_body_entered(body : Node) -> void:
+	print(body)
+	print("entered")
+	if body.is_in_group("enemy"):
+		if body.has_method("stun"):
+			body.stun(3)
+			await get_tree().create_timer(1).timeout
+			self.queue_free()

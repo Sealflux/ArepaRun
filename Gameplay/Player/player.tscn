@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://pdajem1y3mbh" path="res://Gameplay/Player/character_body_2d.gd" id="1_t4lfm"]
 [ext_resource type="Texture2D" uid="uid://cvikfta02w2vo" path="res://Assets/Sprites/ActualArepa.png" id="2_t4lfm"]
-[ext_resource type="Texture2D" uid="uid://bcrl7l76ajiua" path="res://Assets/Backgrounds/Macondograss.png" id="3_hkase"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nj2yk"]
 radius = 43.0
@@ -10,6 +9,7 @@ radius = 43.0
 [node name="Player" type="Node2D" unique_id=14611999]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=279654383]
+z_index = 2
 collision_mask = 15
 script = ExtResource("1_t4lfm")
 
@@ -23,27 +23,3 @@ texture = ExtResource("2_t4lfm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=867981450]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_nj2yk")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=304957955]
-layer = -1
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=627323269]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 1153.0
-offset_bottom = 649.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=808302562]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -5.0
-offset_top = -64.0
-offset_right = 186.0
-offset_bottom = 43.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_hkase")

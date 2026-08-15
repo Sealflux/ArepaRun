@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://22flj6sr85bs" path="res://Assets/Sprites/Sidewalk.png" id="1_kkg88"]
 [ext_resource type="Script" uid="uid://br4bq2nbkexb4" path="res://Gameplay/Player/cutscene.gd" id="1_u7e5n"]
 [ext_resource type="PackedScene" uid="uid://dhypjlm2ujle7" path="res://Gameplay/Enemies/enemy.tscn" id="4_u7e5n"]
+[ext_resource type="Texture2D" uid="uid://1aw248wejq1u" path="res://Assets/Backgrounds/Sky.png" id="5_hwp5v"]
+[ext_resource type="Texture2D" uid="uid://bcrl7l76ajiua" path="res://Assets/Backgrounds/Macondograss.png" id="6_8mvcg"]
 
 [sub_resource type="Animation" id="Animation_u7e5n"]
 resource_name = "Cutscene"
@@ -72,3 +74,23 @@ position = Vector2(-175, 24)
 
 [node name="Enemy" parent="." unique_id=721120592 instance=ExtResource("4_u7e5n")]
 position = Vector2(-784, -41)
+
+[node name="Sky" type="Sprite2D" parent="." unique_id=1817642669]
+z_index = -1
+texture_repeat = 2
+position = Vector2(3438.5732, -335.58084)
+scale = Vector2(2.1482294, 6.642396)
+texture = ExtResource("5_hwp5v")
+offset = Vector2(0, -100)
+region_enabled = true
+region_rect = Rect2(0, 50, 5000, 150)
+
+[node name="Grass" type="Sprite2D" parent="." unique_id=1659039095]
+z_index = -1
+texture_repeat = 2
+position = Vector2(3451.3677, 650.4148)
+scale = Vector2(5.667859, 4.5854473)
+texture = ExtResource("6_8mvcg")
+offset = Vector2(0, -125)
+region_enabled = true
+region_rect = Rect2(8.605538, 823.2443, 1899.3306, 252.63947)

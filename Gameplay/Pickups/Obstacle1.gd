@@ -1,7 +1,7 @@
 extends Area2D
 
 var screen_size
-@export var speeddecrease: float = -50
+@export var speeddecrease: float = -35
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

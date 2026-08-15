@@ -24,7 +24,7 @@ func launch(x_power: float, y_power: float) -> void:
 	momentum = momentum + x_power
 	velocity.y = y_power
 
-func turn(delta) -> void:
+func turnfunc(delta) -> void:
 	var turn = 1
 	rotation += turn * rotation_speed * delta
 
@@ -49,7 +49,7 @@ func spawn_bus_behind_you() -> void:
 		print("ERROR: No Bus scene assigned in the Inspector!")
 		return
 	var new_bus = Bus.instantiate()
-	new_bus.global_position = global_position + Vector2(-150, -500)
+	new_bus.global_position = global_position + Vector2(-150, -25)
 	get_tree().current_scene.add_child(new_bus)
 	can_spawnBus = false
 	await get_tree().create_timer(3).timeout
@@ -66,7 +66,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
-	turn(delta)
+	turnfunc(delta)
 	position.x += momentum * delta   
 	if Input.is_action_just_pressed("spawn_espatula") and can_spawnEspatula:
 		spawn_spatula_in_front()

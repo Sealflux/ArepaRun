@@ -1,14 +1,61 @@
 [gd_scene format=3 uid="uid://d3u57bmwn5w3x"]
 
+[ext_resource type="Texture2D" uid="uid://1aw248wejq1u" path="res://Assets/Backgrounds/Sky.png" id="1_34bfm"]
 [ext_resource type="PackedScene" uid="uid://1giq7r5dnvyg" path="res://Gameplay/Player/player.tscn" id="1_gnif3"]
 [ext_resource type="Texture2D" uid="uid://22flj6sr85bs" path="res://Assets/Sprites/Sidewalk.png" id="1_lwy2l"]
+[ext_resource type="Script" uid="uid://fs3baxlbbsbc" path="res://Levels/main.gd" id="1_ovrsl"]
+[ext_resource type="Texture2D" uid="uid://bcrl7l76ajiua" path="res://Assets/Backgrounds/Macondograss.png" id="2_ovrsl"]
 [ext_resource type="PackedScene" uid="uid://dhypjlm2ujle7" path="res://Gameplay/Enemies/enemy.tscn" id="4_nj2yk"]
 [ext_resource type="PackedScene" uid="uid://0bdp10ymmmlc" path="res://Gameplay/Pickups/obstacle_1.tscn" id="5_7pswh"]
+
+[sub_resource type="Animation" id="Animation_u7e5n"]
+resource_name = "Cutscene"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-625, -1008), Vector2(-88, -211)]
+}
+
+[sub_resource type="Animation" id="Animation_8daan"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-175, 24)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_34bfm"]
+_data = {
+&"Cutscene": SubResource("Animation_u7e5n"),
+&"RESET": SubResource("Animation_8daan")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
 size = Vector2(7588, 69)
 
 [node name="Main" type="Node2D" unique_id=2135187139]
+script = ExtResource("1_ovrsl")
+
+[node name="Player" parent="." unique_id=14611999 instance=ExtResource("1_gnif3")]
+position = Vector2(-175, 24)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2039026208]
+libraries/ = SubResource("AnimationLibrary_34bfm")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=38201463]
 collision_layer = 8
@@ -26,9 +73,6 @@ texture = ExtResource("1_lwy2l")
 region_enabled = true
 region_rect = Rect2(0, 0, 5000, 40)
 
-[node name="Player" parent="." unique_id=14611999 instance=ExtResource("1_gnif3")]
-position = Vector2(-269, -1)
-
 [node name="Enemy" parent="." unique_id=721120592 instance=ExtResource("4_nj2yk")]
 position = Vector2(-784, -41)
 
@@ -37,3 +81,29 @@ position = Vector2(457, -7)
 
 [node name="Obstacle2" parent="." unique_id=469879994 instance=ExtResource("5_7pswh")]
 position = Vector2(1153, -8)
+
+[node name="Sky" type="Sprite2D" parent="." unique_id=890659274]
+z_index = -1
+texture_repeat = 2
+position = Vector2(3438.5732, -335.58084)
+scale = Vector2(2.1482294, 6.642396)
+texture = ExtResource("1_34bfm")
+offset = Vector2(0, -100)
+region_enabled = true
+region_rect = Rect2(0, 50, 5000, 150)
+
+[node name="Grass" type="Sprite2D" parent="." unique_id=1233357967]
+z_index = -1
+texture_repeat = 2
+position = Vector2(3451.3677, 650.4148)
+scale = Vector2(5.667859, 4.5854473)
+texture = ExtResource("2_ovrsl")
+offset = Vector2(0, -125)
+region_enabled = true
+region_rect = Rect2(8.605538, 823.2443, 1899.3306, 252.63947)
+
+[node name="Obstacle4" parent="." unique_id=860214636 instance=ExtResource("5_7pswh")]
+position = Vector2(3826, -32)
+
+[node name="Obstacle3" parent="." unique_id=719809782 instance=ExtResource("5_7pswh")]
+position = Vector2(2038, -13)
