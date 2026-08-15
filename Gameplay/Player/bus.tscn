@@ -8,15 +8,15 @@ size = Vector2(332, 140)
 
 [node name="bus" type="Node2D" unique_id=1014882527]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=75862817]
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=246982714]
 scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 10
 script = ExtResource("1_l3w2u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=600851309]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=600851309]
 position = Vector2(-2, 96)
 shape = SubResource("RectangleShape2D_s4ngg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1745549265]
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1745549265]
 texture = ExtResource("2_l3w2u")

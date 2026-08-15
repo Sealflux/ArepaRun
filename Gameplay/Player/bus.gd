@@ -1,21 +1,15 @@
-extends Area2D
+extends RigidBody2D
 
 var screen_size
+var velocity: Vector2 = Vector2.ZERO
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("bus")
 	screen_size = get_viewport_rect().size
-	body_entered.connect(_on_body_entered)
-
+	await get_tree().create_timer(1.5).timeout
+	self.queue_free()
+	
+	
 
 func _physics_process(delta: float) -> void:
 	pass
-
-func _on_body_entered(body : Node) -> void:
-	print(body)
-	print("entered")
-	if body.is_in_group("enemy"):
-		if body.has_method("stun"):
-			body.stun(3)
-			await get_tree().create_timer(1).timeout
-			self.queue_free()

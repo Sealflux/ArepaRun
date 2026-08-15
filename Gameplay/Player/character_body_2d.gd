@@ -49,7 +49,7 @@ func spawn_bus_behind_you() -> void:
 		print("ERROR: No Bus scene assigned in the Inspector!")
 		return
 	var new_bus = Bus.instantiate()
-	new_bus.global_position = global_position + Vector2(-150, -25)
+	new_bus.global_position = global_position + Vector2(-150, -600)
 	get_tree().current_scene.add_child(new_bus)
 	can_spawnBus = false
 	await get_tree().create_timer(3).timeout
