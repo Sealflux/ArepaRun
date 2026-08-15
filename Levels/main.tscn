@@ -3,16 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://1giq7r5dnvyg" path="res://Gameplay/Player/player.tscn" id="1_gnif3"]
 [ext_resource type="Texture2D" uid="uid://22flj6sr85bs" path="res://Assets/Sprites/Sidewalk.png" id="1_lwy2l"]
 [ext_resource type="PackedScene" uid="uid://d0x58vlfvf1h6" path="res://Gameplay/Player/camera.tscn" id="2_lwy2l"]
+[ext_resource type="PackedScene" uid="uid://dhypjlm2ujle7" path="res://Gameplay/Enemies/enemy.tscn" id="4_nj2yk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
-size = Vector2(7132, 69)
+size = Vector2(7588, 69)
 
 [node name="Main" type="Node2D" unique_id=2135187139]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=38201463]
+collision_layer = 8
+collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2110604086]
-position = Vector2(2965, 111)
+position = Vector2(2737, 111)
 shape = SubResource("RectangleShape2D_udbx3")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122123832]
@@ -26,3 +29,9 @@ region_rect = Rect2(0, 0, 5000, 40)
 [node name="Player" parent="." unique_id=14611999 instance=ExtResource("1_gnif3")]
 
 [node name="Camera" parent="." unique_id=168684603 instance=ExtResource("2_lwy2l")]
+
+[node name="Enemy" parent="." unique_id=721120592 instance=ExtResource("4_nj2yk")]
+position = Vector2(-784, -41)
+
+[node name="Enemy2" parent="." unique_id=766044934 instance=ExtResource("4_nj2yk")]
+position = Vector2(-784, -41)

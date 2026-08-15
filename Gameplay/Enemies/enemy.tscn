@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dhypjlm2ujle7"]
+
+[ext_resource type="Script" uid="uid://bfmjkndruh0ad" path="res://Gameplay/Enemies/character_body_2d.gd" id="1_0pe0a"]
+[ext_resource type="Texture2D" uid="uid://s6t0f4ejnd8w" path="res://Assets/Sprites/ShockedGuy.png" id="2_4763r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
+size = Vector2(221, 197)
+
+[node name="Enemy" type="Node2D" unique_id=721120592]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1357334941]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_0pe0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1520421586]
+texture = ExtResource("2_4763r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1679095030]
+shape = SubResource("RectangleShape2D_udbx3")
