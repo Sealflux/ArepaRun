@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bpb8r5p3n3cii"]
+
+[ext_resource type="Texture2D" uid="uid://cvikfta02w2vo" path="res://Assets/Sprites/ActualArepa.png" id="1_swfs3"]
+
+[node name="Tutorial2" type="Node2D" unique_id=1736681899]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1965847352]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_swfs3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1669808626]
+
+[node name="Label" type="Label" parent="." unique_id=1742888371]
+offset_left = -252.0
+offset_top = -69.0
+offset_right = 249.0
+offset_bottom = -46.0
+size_flags_horizontal = 4
+text = "You are being chased!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

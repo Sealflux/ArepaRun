@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://du1260ak3d8up"]
+
+[ext_resource type="Texture2D" uid="uid://xeyagc3cgu2t" path="res://Assets/Sprites/Marimonda.png" id="1_n2rje"]
+
+[node name="Tutorial4" type="Node2D" unique_id=1196987802]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=540487890]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_n2rje")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1017024901]
+
+[node name="Label" type="Label" parent="." unique_id=222845674]
+offset_left = -252.0
+offset_top = -93.0
+offset_right = 249.0
+offset_bottom = -70.0
+size_flags_horizontal = 4
+text = "His name is Marimondito. He likes Arepas!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

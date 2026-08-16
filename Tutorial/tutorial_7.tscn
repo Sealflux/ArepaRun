@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bsrgimfwaamkw"]
+
+[ext_resource type="Texture2D" uid="uid://cvikfta02w2vo" path="res://Assets/Sprites/ActualArepa.png" id="1_6y8ur"]
+[ext_resource type="PackedScene" uid="uid://xudargbwmfeg" path="res://Ui/espatula_ui.tscn" id="2_2vlnm"]
+[ext_resource type="PackedScene" uid="uid://cpdbjru378s6i" path="res://Gameplay/Player/espatula.tscn" id="3_d6wpm"]
+
+[node name="Tutorial7" type="Node2D" unique_id=2117548537]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=492871084]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_6y8ur")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=746374985]
+
+[node name="Label" type="Label" parent="." unique_id=655667430]
+offset_left = -251.0
+offset_top = -68.0
+offset_right = 250.0
+offset_bottom = -45.0
+size_flags_horizontal = 4
+text = "Like spawning a spatula"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="EspatulaUi" parent="." unique_id=1505442874 instance=ExtResource("2_2vlnm")]
+
+[node name="Espatula" parent="." unique_id=533407782 instance=ExtResource("3_d6wpm")]
+position = Vector2(192, 1)
