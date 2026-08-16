@@ -33,14 +33,14 @@ script = ExtResource("1_tywo3")
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_udbx3")
 animation = &"QTE"
-frame_progress = 0.56608343
+frame_progress = 0.57115096
 
 [node name="Button" type="Button" parent="." unique_id=1142495703]
 z_index = -1
-offset_left = -100.99999
-offset_top = -112.99999
-offset_right = -79.99999
-offset_bottom = -92.99999
+offset_left = -85.0
+offset_top = -90.00001
+offset_right = -68.1
+offset_bottom = -73.600006
 scale = Vector2(10, 10)
 
 [node name="Timer" type="Timer" parent="Button" unique_id=116095558]
