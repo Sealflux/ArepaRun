@@ -74,7 +74,7 @@ shape = SubResource("RectangleShape2D_udbx3")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122123832]
 texture_repeat = 2
-position = Vector2(1160, 110.00001)
+position = Vector2(1159.9999, 110)
 scale = Vector2(2.1482294, 3.0890622)
 texture = ExtResource("1_lwy2l")
 region_enabled = true

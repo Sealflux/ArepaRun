@@ -23,7 +23,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"QTE",
-"speed": 2.0
+"speed": 8.0
 }]
 
 [node name="QTE" type="Node2D" unique_id=176600565]
@@ -33,7 +33,7 @@ script = ExtResource("1_tywo3")
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_udbx3")
 animation = &"QTE"
-frame_progress = 0.23167698
+frame_progress = 0.56608343
 
 [node name="Button" type="Button" parent="." unique_id=1142495703]
 z_index = -1

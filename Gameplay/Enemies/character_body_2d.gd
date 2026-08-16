@@ -16,6 +16,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = speed
 		speed = speed + 1
 	move_and_slide()
+	if position.x > 11000:
+		self.queue_free()
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collidedobject = collision.get_collider()

@@ -42,7 +42,7 @@ func spawn_spatula_in_front() -> void:
 	get_tree().current_scene.add_child(new_spatula)
 	$"../../EspatulaUi".playCooldown()
 	can_spawnEspatula = false
-	await get_tree().create_timer(6).timeout
+	await get_tree().create_timer(3.5).timeout
 	$"../../EspatulaUi".stopCooldown()
 	can_spawnEspatula = true
 func spawn_bus_behind_you() -> void:
