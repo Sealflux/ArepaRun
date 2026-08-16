@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cso8b6snemut1"]
+
+[ext_resource type="Texture2D" uid="uid://cvikfta02w2vo" path="res://Assets/Sprites/ActualArepa.png" id="1_074du"]
+
+[node name="Tutorial5" type="Node2D" unique_id=26043805]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=296563627]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_074du")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1351245066]
+
+[node name="Label" type="Label" parent="." unique_id=1188477506]
+offset_left = -251.0
+offset_top = -72.0
+offset_right = 250.0
+offset_bottom = -49.0
+size_flags_horizontal = 4
+text = "But us Arepas, no like be eat"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

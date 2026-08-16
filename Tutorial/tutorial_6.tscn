@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ho77guds2uxv"]
+
+[ext_resource type="Texture2D" uid="uid://cvikfta02w2vo" path="res://Assets/Sprites/ActualArepa.png" id="1_xownh"]
+
+[node name="Tutorial6" type="Node2D" unique_id=594449820]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302147016]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xownh")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1596468290]
+
+[node name="Label" type="Label" parent="." unique_id=744398167]
+offset_left = -251.0
+offset_top = -68.0
+offset_right = 250.0
+offset_bottom = -45.0
+size_flags_horizontal = 4
+text = "So we rebel with eldritch powers"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bwobk7x32m0si"]
+
+[ext_resource type="Texture2D" uid="uid://cvikfta02w2vo" path="res://Assets/Sprites/ActualArepa.png" id="1_8cddh"]
+[ext_resource type="PackedScene" uid="uid://gppeoncv6bke" path="res://Ui/bus_ui.tscn" id="2_400wr"]
+[ext_resource type="PackedScene" uid="uid://ry4qhyyw60i1" path="res://Gameplay/Player/bus.tscn" id="3_r7j5y"]
+
+[node name="Tutorial8" type="Node2D" unique_id=378566231]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1083703578]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8cddh")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=171351148]
+
+[node name="Label" type="Label" parent="." unique_id=1525378232]
+offset_left = -251.0
+offset_top = -68.0
+offset_right = 250.0
+offset_bottom = -45.0
+size_flags_horizontal = 4
+text = "Or a Transmilenio on our enemies!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bus_ui" parent="." unique_id=335497429 instance=ExtResource("2_400wr")]
+
+[node name="bus" parent="bus_ui" unique_id=1014882527 instance=ExtResource("3_r7j5y")]
+position = Vector2(177, -48)

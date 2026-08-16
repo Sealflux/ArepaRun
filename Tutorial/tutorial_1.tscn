@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://hibocg4r5t6u"]
+
+[ext_resource type="Texture2D" uid="uid://cvikfta02w2vo" path="res://Assets/Sprites/ActualArepa.png" id="1_sec2d"]
+[ext_resource type="Script" uid="uid://ds7n3c6nmc0tk" path="res://Tutorial/Tutorial1.gd" id="2_t34ps"]
+
+[node name="Tutorial1" type="Node2D" unique_id=1605798714]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=445707150]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_sec2d")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=775907297]
+
+[node name="Label" type="Label" parent="." unique_id=764032155]
+offset_left = -252.0
+offset_top = -69.0
+offset_right = 249.0
+offset_bottom = -46.0
+size_flags_horizontal = 4
+text = "This is you, an Arepa, rolling for safety, no desire to be devoured."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="." unique_id=1695578883]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_t34ps")
+
+[node name="Button" type="Button" parent="Control" unique_id=219915783]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = 76.0
+offset_right = 58.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=1065518015]
+layout_mode = 0
+offset_left = -59.0
+offset_top = 78.0
+offset_right = 56.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 50
+text = "Next"
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
