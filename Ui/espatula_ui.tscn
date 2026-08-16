@@ -87,7 +87,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Cooldown",
-"speed": 6.67
+"speed": 3.34
 }]
 
 [node name="EspatulaUi" type="CanvasLayer" unique_id=1505442874]

@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 125
 var screen_size
 var is_stunned: bool = false
+var is_paused: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,3 +33,10 @@ func stun(duration: float) -> void:
 	velocity.x = 0
 	await get_tree().create_timer(duration).timeout
 	is_stunned = false
+func set_paused(paused: bool) -> void:
+	is_paused = paused
+	set_process(not paused)
+	set_physics_process(not paused)
+	
+	if has_node("AnimatedSprite2D"):
+		get_node("AnimatedSprite2D").paused = paused

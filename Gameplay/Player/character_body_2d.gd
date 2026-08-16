@@ -11,7 +11,7 @@ var can_spawnEspatula: bool = true
 @export var Bus: PackedScene
 var can_spawnBus: bool = true
 var screen_size
-
+@export var is_paused: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -42,7 +42,7 @@ func spawn_spatula_in_front() -> void:
 	get_tree().current_scene.add_child(new_spatula)
 	$"../../EspatulaUi".playCooldown()
 	can_spawnEspatula = false
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(6).timeout
 	$"../../EspatulaUi".stopCooldown()
 	can_spawnEspatula = true
 func spawn_bus_behind_you() -> void:
@@ -54,10 +54,12 @@ func spawn_bus_behind_you() -> void:
 	get_tree().current_scene.add_child(new_bus)
 	$"../../bus_ui".playCooldown()
 	can_spawnBus = false
-	await get_tree().create_timer(5 ).timeout
+	await get_tree().create_timer(5).timeout
 	$"../../bus_ui".stopCooldown()
 	can_spawnBus = true
 func _physics_process(delta: float) -> void:
+	if is_paused:
+		return
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -75,3 +77,11 @@ func _physics_process(delta: float) -> void:
 		spawn_spatula_in_front()
 	if Input.is_action_just_pressed("spawn_bus") and can_spawnBus:
 		spawn_bus_behind_you()
+func set_paused(paused: bool) -> void:
+	is_paused = paused
+	set_process(not paused)
+	set_physics_process(not paused)
+	
+	# Optional: freeze animations
+	if has_node("AnimatedSprite2D"):
+		get_node("AnimatedSprite2D").paused = paused
