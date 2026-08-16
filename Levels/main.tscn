@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://22flj6sr85bs" path="res://Assets/Sprites/Sidewalk.png" id="1_lwy2l"]
 [ext_resource type="Script" uid="uid://fs3baxlbbsbc" path="res://Levels/main.gd" id="1_ovrsl"]
 [ext_resource type="Texture2D" uid="uid://bcrl7l76ajiua" path="res://Assets/Backgrounds/Macondograss.png" id="2_ovrsl"]
+[ext_resource type="PackedScene" uid="uid://by885jy6x6jed" path="res://Ui/Score.tscn" id="3_hbaan"]
 [ext_resource type="PackedScene" uid="uid://dhypjlm2ujle7" path="res://Gameplay/Enemies/enemy.tscn" id="4_nj2yk"]
 [ext_resource type="PackedScene" uid="uid://0bdp10ymmmlc" path="res://Gameplay/Pickups/obstacle_1.tscn" id="5_7pswh"]
+[ext_resource type="PackedScene" uid="uid://dgj2hej6kd41v" path="res://Gameplay/Pickups/obstacle_2.tscn" id="8_he5fp"]
 
 [sub_resource type="Animation" id="Animation_u7e5n"]
 resource_name = "Cutscene"
@@ -77,10 +79,10 @@ region_rect = Rect2(0, 0, 5000, 40)
 position = Vector2(-784, -41)
 
 [node name="Obstacle1" parent="." unique_id=2122328293 instance=ExtResource("5_7pswh")]
-position = Vector2(457, -7)
+position = Vector2(275, -1)
 
 [node name="Obstacle2" parent="." unique_id=469879994 instance=ExtResource("5_7pswh")]
-position = Vector2(1153, -8)
+position = Vector2(957, -9)
 
 [node name="Sky" type="Sprite2D" parent="." unique_id=890659274]
 z_index = -1
@@ -103,7 +105,13 @@ region_enabled = true
 region_rect = Rect2(8.605538, 823.2443, 1899.3306, 252.63947)
 
 [node name="Obstacle4" parent="." unique_id=860214636 instance=ExtResource("5_7pswh")]
-position = Vector2(3826, -32)
+position = Vector2(3576, -15)
 
 [node name="Obstacle3" parent="." unique_id=719809782 instance=ExtResource("5_7pswh")]
-position = Vector2(2038, -13)
+position = Vector2(1990, -8)
+
+[node name="Score" parent="." unique_id=2082308128 instance=ExtResource("3_hbaan")]
+
+[node name="obstacle_2" parent="." unique_id=248513387 instance=ExtResource("8_he5fp")]
+position = Vector2(5403, -108)
+scale = Vector2(5.667859, 4.5854473)
