@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://gppeoncv6bke"]
+
+[ext_resource type="Script" uid="uid://ctww6v73p48up" path="res://Ui/bus_ui.gd" id="1_3ky64"]
+[ext_resource type="Texture2D" uid="uid://0i11p0clphl" path="res://Assets/Sprites/Transmi-Loading1.png" id="2_3ky64"]
+[ext_resource type="Texture2D" uid="uid://dpelnetcswdrt" path="res://Assets/Sprites/Transmi-Loading2.png" id="3_fx0g4"]
+[ext_resource type="Texture2D" uid="uid://etqbxp4h2j22" path="res://Assets/Sprites/Transmi-Loading3.png" id="4_2v731"]
+[ext_resource type="Texture2D" uid="uid://dxtvf308yxgap" path="res://Assets/Sprites/Transmi-Loading4.png" id="5_bchn6"]
+[ext_resource type="Texture2D" uid="uid://yr8ypebdj8qy" path="res://Assets/Sprites/Transmi-Loading5.png" id="6_mcsqb"]
+[ext_resource type="Texture2D" uid="uid://crg4i0k4fsc4c" path="res://Assets/Sprites/Transmi-Loading6.png" id="7_qt0m1"]
+[ext_resource type="Texture2D" uid="uid://5com12ralybb" path="res://Assets/Sprites/Transmi-Loading7.png" id="8_8iqxs"]
+[ext_resource type="Texture2D" uid="uid://vq2npxcdv02p" path="res://Assets/Sprites/Transmi-Loading8.png" id="9_8qdio"]
+[ext_resource type="Texture2D" uid="uid://rtwnab42pp14" path="res://Assets/Sprites/Transmi-Loading9.png" id="10_ftkbm"]
+[ext_resource type="Texture2D" uid="uid://cd672smk814el" path="res://Assets/Sprites/Transmi-Loading10.png" id="11_8xcwt"]
+[ext_resource type="Texture2D" uid="uid://dbin5eq1aykii" path="res://Assets/Sprites/Transmi-Loading11.png" id="12_mo4lo"]
+[ext_resource type="Texture2D" uid="uid://3hhb5cvfq77" path="res://Assets/Sprites/Transmi-Loading12.png" id="13_4m67g"]
+[ext_resource type="Texture2D" uid="uid://b3w4vd2uy76qm" path="res://Assets/Sprites/Transmi-Loading13.png" id="14_mr8m6"]
+[ext_resource type="Texture2D" uid="uid://qa6k3xgnfdyv" path="res://Assets/Sprites/Transmi-Loading14.png" id="15_gsp7i"]
+[ext_resource type="Texture2D" uid="uid://ddv6ohr6w50t2" path="res://Assets/Sprites/Transmi-Loading15.png" id="16_4kmdp"]
+[ext_resource type="Texture2D" uid="uid://w351g1j8h0q" path="res://Assets/Sprites/Transmi-Loading16.png" id="17_3xq1r"]
+[ext_resource type="Texture2D" uid="uid://bwjftf3b556mj" path="res://Assets/Sprites/Transmi-Loading17.png" id="18_r3o72"]
+[ext_resource type="Texture2D" uid="uid://bud0fl8potxqw" path="res://Assets/Sprites/Transmi-Loading18.png" id="19_u3mvc"]
+[ext_resource type="Texture2D" uid="uid://cyl1kt6c8mg3o" path="res://Assets/Sprites/Transmi-Loading19.png" id="20_niio4"]
+[ext_resource type="Texture2D" uid="uid://3j16lte78rd6" path="res://Assets/Sprites/Transmi-Loading20.png" id="21_dyowe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dyowe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3ky64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fx0g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2v731")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bchn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mcsqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qt0m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8iqxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8qdio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ftkbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8xcwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mo4lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4m67g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mr8m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gsp7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4kmdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3xq1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_r3o72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_u3mvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_niio4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dyowe")
+}],
+"loop": 1,
+"name": &"Cooldown",
+"speed": 4.0
+}]
+
+[node name="bus_ui" type="CanvasLayer" unique_id=335497429]
+script = ExtResource("1_3ky64")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=990753520]
+z_index = -1
+offset_left = 164.0
+offset_top = 165.0
+offset_right = 164.0
+offset_bottom = 165.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PanelContainer" unique_id=151350363]
+position = Vector2(908, 75.000015)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_dyowe")
+animation = &"Cooldown"

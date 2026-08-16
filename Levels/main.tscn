@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dhypjlm2ujle7" path="res://Gameplay/Enemies/enemy.tscn" id="4_nj2yk"]
 [ext_resource type="PackedScene" uid="uid://0bdp10ymmmlc" path="res://Gameplay/Pickups/obstacle_1.tscn" id="5_7pswh"]
 [ext_resource type="PackedScene" uid="uid://dgj2hej6kd41v" path="res://Gameplay/Pickups/obstacle_2.tscn" id="8_he5fp"]
+[ext_resource type="PackedScene" uid="uid://xudargbwmfeg" path="res://Ui/espatula_ui.tscn" id="10_u05pv"]
+[ext_resource type="PackedScene" uid="uid://gppeoncv6bke" path="res://bus_ui.tscn" id="11_mykqc"]
 
 [sub_resource type="Animation" id="Animation_u7e5n"]
 resource_name = "Cutscene"
@@ -48,7 +50,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
-size = Vector2(7588, 69)
+size = Vector2(20000, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_he5fp"]
+size = Vector2(232, 244)
 
 [node name="Main" type="Node2D" unique_id=2135187139]
 script = ExtResource("1_ovrsl")
@@ -73,7 +78,7 @@ position = Vector2(1160, 110.00001)
 scale = Vector2(2.1482294, 3.0890622)
 texture = ExtResource("1_lwy2l")
 region_enabled = true
-region_rect = Rect2(0, 0, 5000, 40)
+region_rect = Rect2(0, 0, 20000, 40)
 
 [node name="Enemy" parent="." unique_id=721120592 instance=ExtResource("4_nj2yk")]
 position = Vector2(-784, -41)
@@ -87,8 +92,8 @@ position = Vector2(957, -9)
 [node name="Sky" type="Sprite2D" parent="." unique_id=890659274]
 z_index = -1
 texture_repeat = 2
-position = Vector2(3438.5732, -335.58084)
-scale = Vector2(2.1482294, 6.642396)
+position = Vector2(4352.5, -335.58084)
+scale = Vector2(2.5138001, 6.642396)
 texture = ExtResource("1_34bfm")
 offset = Vector2(0, -100)
 region_enabled = true
@@ -97,15 +102,18 @@ region_rect = Rect2(0, 50, 5000, 150)
 [node name="Grass" type="Sprite2D" parent="." unique_id=1233357967]
 z_index = -1
 texture_repeat = 2
-position = Vector2(3451.3677, 650.4148)
-scale = Vector2(5.667859, 4.5854473)
+position = Vector2(4354.6836, 651)
+scale = Vector2(6.619606, 4.5854473)
 texture = ExtResource("2_ovrsl")
 offset = Vector2(0, -125)
 region_enabled = true
 region_rect = Rect2(8.605538, 823.2443, 1899.3306, 252.63947)
 
 [node name="Obstacle4" parent="." unique_id=860214636 instance=ExtResource("5_7pswh")]
-position = Vector2(3576, -15)
+position = Vector2(3526, -18)
+
+[node name="Obstacle5" parent="." unique_id=916461867 instance=ExtResource("5_7pswh")]
+position = Vector2(5013, -16)
 
 [node name="Obstacle3" parent="." unique_id=719809782 instance=ExtResource("5_7pswh")]
 position = Vector2(1990, -8)
@@ -113,5 +121,18 @@ position = Vector2(1990, -8)
 [node name="Score" parent="." unique_id=2082308128 instance=ExtResource("3_hbaan")]
 
 [node name="obstacle_2" parent="." unique_id=248513387 instance=ExtResource("8_he5fp")]
-position = Vector2(5403, -108)
+position = Vector2(8217, -100)
 scale = Vector2(5.667859, 4.5854473)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1267925800]
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=863290235]
+position = Vector2(21166, -272)
+shape = SubResource("RectangleShape2D_he5fp")
+
+[node name="EspatulaUi" parent="." unique_id=1505442874 instance=ExtResource("10_u05pv")]
+
+[node name="bus_ui" parent="." unique_id=335497429 instance=ExtResource("11_mykqc")]

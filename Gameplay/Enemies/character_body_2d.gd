@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 	position.y = -5
 	if not is_stunned:
 		velocity.x = speed
-		speed = speed + 0.2
+		speed = speed + 1
 	move_and_slide()
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 		
 		if collidedobject.is_in_group("player"):
 			collidedobject.queue_free()
+			$"../../EspatulaUi".stopCooldown()
 		elif collidedobject.is_in_group("destructible"):
 			collidedobject.queue_free()
 		elif collidedobject.is_in_group("bus"):

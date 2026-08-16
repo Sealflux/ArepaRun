@@ -40,9 +40,10 @@ func spawn_spatula_in_front() -> void:
 
 	new_spatula.global_position = global_position + Vector2(150, 0)
 	get_tree().current_scene.add_child(new_spatula)
-
+	$"../../EspatulaUi".playCooldown()
 	can_spawnEspatula = false
 	await get_tree().create_timer(3).timeout
+	$"../../EspatulaUi".stopCooldown()
 	can_spawnEspatula = true
 func spawn_bus_behind_you() -> void:
 	if Bus == null:
@@ -51,8 +52,10 @@ func spawn_bus_behind_you() -> void:
 	var new_bus = Bus.instantiate()
 	new_bus.global_position = global_position + Vector2(-150, -600)
 	get_tree().current_scene.add_child(new_bus)
+	$"../../bus_ui".playCooldown()
 	can_spawnBus = false
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(5).timeout
+	$"../../bus_ui".stopCooldown()
 	can_spawnBus = true
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

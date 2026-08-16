@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b122jvb07la2c" path="res://Assets/Sprites/D1.png" id="1_mpcul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbx3"]
-size = Vector2(248, 312)
+size = Vector2(248, 310)
 
 [node name="Obstacle1" type="Node2D" unique_id=2122328293]
 
@@ -15,7 +15,7 @@ collision_mask = 9
 script = ExtResource("1_3xahv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1528247233]
-position = Vector2(-6, -4)
+position = Vector2(-6, -2)
 shape = SubResource("RectangleShape2D_udbx3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=242392277]
