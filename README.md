@@ -1,5 +1,7 @@
 # ArepaRun
 Run away from the people who want to eat you(you are an arepa), if they catch you, you die and have to start again until you beat the game´s final boss(Colombian soccer Player James Rodriguez) until you win the combat and beat the game.
+## Demo
+https://sealflux.itch.io/areparun
 
 Prior Requirements:
 Our game doesn´t need any specific config or adjustment for people to be able to enjoy it, as it is avaiable on itch.io.
