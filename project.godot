@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="ArepaRun"
-run/main_scene="uid://d3u57bmwn5w3x"
+run/main_scene="uid://bxkk8w002d6i7"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

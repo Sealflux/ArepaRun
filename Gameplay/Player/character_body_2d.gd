@@ -54,7 +54,7 @@ func spawn_bus_behind_you() -> void:
 	get_tree().current_scene.add_child(new_bus)
 	$"../../bus_ui".playCooldown()
 	can_spawnBus = false
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(5 ).timeout
 	$"../../bus_ui".stopCooldown()
 	can_spawnBus = true
 func _physics_process(delta: float) -> void:

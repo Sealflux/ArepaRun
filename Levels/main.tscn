@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://0bdp10ymmmlc" path="res://Gameplay/Pickups/obstacle_1.tscn" id="5_7pswh"]
 [ext_resource type="PackedScene" uid="uid://dgj2hej6kd41v" path="res://Gameplay/Pickups/obstacle_2.tscn" id="8_he5fp"]
 [ext_resource type="PackedScene" uid="uid://xudargbwmfeg" path="res://Ui/espatula_ui.tscn" id="10_u05pv"]
-[ext_resource type="PackedScene" uid="uid://gppeoncv6bke" path="res://bus_ui.tscn" id="11_mykqc"]
+[ext_resource type="PackedScene" uid="uid://gppeoncv6bke" path="res://Ui/bus_ui.tscn" id="11_mykqc"]
 
 [sub_resource type="Animation" id="Animation_u7e5n"]
 resource_name = "Cutscene"
