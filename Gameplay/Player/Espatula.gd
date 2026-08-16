@@ -95,10 +95,8 @@ func _on_qte_completed(success: bool) -> void:
 		self.queue_free()
 	else:
 		print("QTE Failed!")
-		# Optional: player takes damage or gets pushed back
-		if player_ref and player_ref.has_method("take_damage"):
-			player_ref.take_damage(10)
-		
+		if player_ref and player_ref.has_method("launch"):
+			player_ref.launch(10, -200)
 		# Still destroy the spatula
 		self.get_parent().play_anim("Espatula")
 		await get_tree().create_timer(0.5).timeout
